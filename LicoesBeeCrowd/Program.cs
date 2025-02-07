@@ -4,33 +4,31 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Digite o numero do algoritmo que deseja executar:");
+            Console.WriteLine("Digite o numero do algoritmo que deseja executar: ");
 
             var opcaoExecucao = Console.ReadLine();
             switch (opcaoExecucao)
             {
                 case "2374":
-                    var algoritmo2374 = new Algoritmo2374();
-                    algoritmo2374.Executar();
+                    ExecutarAlgoritmo<Algoritmo2374>();
                     break;
-
                 case "1019":
                     var algoritmo1019 = new Algoritmo1019();
                     algoritmo1019.Executar();
                     break;
-
                 default:
                     Console.WriteLine("Escolha um algoritmo ja implementado. Vide Classes da solução.");
                     break;  
 
-
-
             }
 
-
-
             Console.WriteLine("Finalizado!");
-            
+        }
+
+        public static void ExecutarAlgoritmo<T>() where T : IBaseAlgoritmo, new()
+        {
+            var instancia = new T();
+            instancia.Executar();
         }
     }
 }
