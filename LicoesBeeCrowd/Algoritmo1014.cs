@@ -1,6 +1,6 @@
 ﻿namespace LicoesBeeCrowd
 {
-    public class Algoritmo1014 : IBaseAlgoritmo
+    internal class Algoritmo1014 : IBaseAlgoritmo
     {
 
         public void Executar()

@@ -19,6 +19,9 @@
                     var algoritmo1019 = new Algoritmo1019();
                     algoritmo1019.Executar();
                     break;
+                case "1011":
+                    ExecutarAlgoritmo<Algoritmo1011>();
+                    break;
                 default:
                     Console.WriteLine("Escolha um algoritmo ja implementado. Vide Classes da solução.");
                     break;  
