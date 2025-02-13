@@ -13,7 +13,7 @@ namespace LicoesBeeCrowd
             // Transfornar a duração de tempo de segundos para o formato hh:mm:ss.
 
             //variavel que guarda o tempo em segundos.
-            var tempoEmSegundos = int.Parse(Console.ReadLine());
+            Int32.TryParse(Console.ReadLine(), out Int32 tempoEmSegundos);
 
             //formatação do tempo em hh:mm:ss com TimeSpan
             var tempoCompleto = TimeSpan.FromSeconds(tempoEmSegundos);
