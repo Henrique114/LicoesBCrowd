@@ -12,13 +12,20 @@
                 case "2374":
                     ExecutarAlgoritmo<Algoritmo2374>();
                     break;
+
+                case "1930":
+                    ExecutarAlgoritmo<Algoritmo1930>();
+                    break;
+
                 case "1014":
                     ExecutarAlgoritmo<Algoritmo1014>();
                     break;
+
                 case "1019":
                     var algoritmo1019 = new Algoritmo1019();
                     algoritmo1019.Executar();
                     break;
+
                 case "1011":
                     ExecutarAlgoritmo<Algoritmo1011>();
                     break;
