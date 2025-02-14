@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace LicoesBeeCrowd
 {
@@ -14,12 +15,16 @@ namespace LicoesBeeCrowd
 			//variavel que guarda o numeo de tomada de todas as reguas de energia.
 			//ex.: 3 5 4 3.
 			var reguas = Console.ReadLine();
-            
+
 			//extrair cada elemento passando para decimal e somando-os
 
-			
+			var totalTomadas = reguas.Split(' ')      // Divide a string por espaço
+				.Where(s => int.TryParse(s, out _))  // Filtra apenas os valores numéricos
+				.Select(int.Parse)                   // Converte para inteiros
+				.Sum();
 
-			Console.WriteLine(totalTomadas);
+
+            Console.WriteLine(totalTomadas -3);
 
 
 
